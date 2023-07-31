@@ -3,13 +3,12 @@ npm run build - production mode
 
 If you want to update the gh-pages branch with the latest changes from your main branch, the typical process is to:
 
-- Checkout to main branch and pull the latest changes from the remote repository.
-- Run your build process to create a fresh build of your application (npm run build).
-- Switch to the gh-pages branch using the command git checkout gh-pages.
-- Remove the old build files. Be careful with this step as it will remove all files and directories in your current directory. 
-    The command is git rm -rf *.
-- Copy the new build files from the dist (or build) directory to the current directory. 
-    The command is cp -r ../main/dist/* . 
-    if your main branch is in a parallel directory named main and your build files are in a directory named dist. 
-    Replace ../main/dist/* with the correct relative path to your build files if your setup is different.
-- Commit these changes and push the gh-pages branch to the remote repository.
+- Checkout to main branch and ensure it's up to date.
+- Run npm run build on the main branch. This will create or update the dist directory on the main branch.
+- Without switching branches, copy the dist folder to a temporary location outside of your project directory. For example: cp -r dist/* /tmp/dist/.
+- Now, checkout to the gh-pages branch with git checkout gh-pages.
+- Delete the old dist directory: git rm -rf *.
+- Copy the new build from the temporary location back to the project directory on the gh-pages branch: cp -r /tmp/dist/* ..
+- Commit the changes with git add . and git commit -m "Update build".
+
+In these commands, replace /tmp/dist/ with the path to the temporary directory where you copied the dist folder.

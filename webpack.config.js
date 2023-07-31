@@ -27,8 +27,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './pages/home/home.html',
-      filename: 'home.html', // Output file name in the 'dist/' directory
+      template: './pages/home/index.html',
+      filename: 'index.html', // Output file name in the 'dist/' directory
     }),
     new HtmlWebpackPlugin({
       template: './pages/about/about.html',

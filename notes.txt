@@ -5,6 +5,7 @@ If you want to update the gh-pages branch with the latest changes from your main
 
 - Checkout to main branch and pull the latest changes from the remote repository.
 - Run your build process to create a fresh build of your application (npm run build).
+- Switch to the gh-pages branch using the command git checkout gh-pages.
 - Remove the old build files. Be careful with this step as it will remove all files and directories in your current directory. 
     The command is git rm -rf *.
 - Copy the new build files from the dist (or build) directory to the current directory. 

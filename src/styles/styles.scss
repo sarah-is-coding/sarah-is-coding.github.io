@@ -1,14 +1,26 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+$background-light: #f3f3f3;
+$background-dark: #333;
+$text-light: #333;
+$text-dark: #f3f3f3;
 
 body {
-    background-color: #f4f4f4;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.light-theme {
+  background: $background-light;
+  color: $text-light;
+}
+
+.dark-theme {
+  background: $background-dark;
+  color: $text-dark;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}

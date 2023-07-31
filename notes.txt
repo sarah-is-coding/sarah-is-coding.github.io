@@ -38,15 +38,15 @@ Directory structure:
     │
     ├── pages/
     │   └── home/
-    │   │   └── index.html
+    │   │   └── home.html
     │   │   └── (associated assets for index page)
     │   │
     │   └── about/
-    │   │   └── index.html
+    │   │   └── about.html
     │   │   └── (associated assets for about page)
     │   │
     │   └── contact/
-    │   │   └── index.html
+    │   │   └── contact.html
     │   │   └── (associated assets for contact page)
     │   │
     │   └── 404.html

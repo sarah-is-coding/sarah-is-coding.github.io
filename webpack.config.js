@@ -5,7 +5,7 @@ const mode = process.env.NODE_ENV || 'development'; // Define mode based on NODE
 
 module.exports = {
   mode: mode,
-  entry: './app.js',
+  entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -27,8 +27,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './pages/home/home.html',
+      filename: 'home.html', // Output file name in the 'dist/' directory
     }),
+    new HtmlWebpackPlugin({
+      template: './pages/about/about.html',
+      filename: 'about.html', // Output file name in the 'dist/' directory
+    }),
+    new HtmlWebpackPlugin({
+      template: './pages/contact/contact.html',
+      filename: 'contact.html', // Output file name in the 'dist/' directory
+    }),
+    // Other plugins...
   ],
   resolve: {
     extensions: ['.js', '.jsx'],

@@ -1,0 +1,2 @@
+npm run start - development mode
+npm run build - production mode

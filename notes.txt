@@ -1,0 +1,84 @@
+npm run start - development mode
+npm run build - production mode
+
+If you want to update the gh-pages branch with the latest changes from your main branch, the typical process is to:
+
+- Checkout to main branch and ensure it's up to date.
+- Run npm run build on the main branch. This will create or update the dist directory on the main branch.
+- Without switching branches, copy the dist folder to a temporary location outside of your project directory. For example: cp -r dist/* ../tmp/dist/
+- Now, checkout to the gh-pages branch with git checkout gh-pages.
+- Delete the old dist directory: git rm -rf *
+- Copy the new build from the temporary location back to the project directory on the gh-pages branch: cp -r ../tmp/dist/* dist
+- Commit the changes with git add . and git commit -m "Update build".
+
+In these commands, replace /tmp/dist/ with the path to the temporary directory where you copied the dist folder..
+
+Directory structure:
+
+    sarah-is-coding.github.io/
+    │
+    ├── dist/
+    │   └── index.html
+    │   └── 404.html
+    │   └── app.js
+    │   └── styles.css
+    │   └── (other build output files)
+    │
+    ├── node_modules/  (auto-generated - don't include in version control)
+    │
+    ├── src/
+    │   └── js/
+    │   │   └── app.js
+    │   │
+    │   └── styles/
+    │   │   └── styles.scss
+    │   │   └── (other SCSS files)
+    │   │
+    │   └── (other source files and directories)
+    │
+    ├── pages/
+    │   └── home/
+    │   │   └── index.html
+    │   │   └── (associated assets for index page)
+    │   │
+    │   └── about/
+    │   │   └── about.html
+    │   │   └── (associated assets for about page)
+    │   │
+    │   └── contact/
+    │   │   └── contact.html
+    │   │   └── (associated assets for contact page)
+    │   │
+    │   └── 404.html
+    │   │   └── (associated assets for 404 page)
+    │
+    ├── assets/
+    │   └── images/
+    │   └── fonts/
+    │   └── icons/
+    │   └── (other asset files)
+    │
+    ├── components/
+    │   └── (component files)
+    │
+    ├── helpers/
+    │   └── (helper files)
+    │
+    ├── data/
+    │   └── (data files)
+    │
+    ├── tests/
+    │   └── (test scripts and test data)
+    │
+    ├── vendor/
+    │   └── (third-party libraries and external scripts)
+    │
+    ├── docs/
+    │   └── (documentation and readme files)
+    │
+    ├── .babelrc
+    ├── package.json
+    ├── package-lock.json
+    ├── postcss.config.js
+    ├── tailwind.config.js
+    └── webpack.config.js

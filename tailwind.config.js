@@ -3,7 +3,12 @@ module.exports = {
   purge: ['./index.html', './src/**/*.js'],
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'josefin': ['Josefin Slab', 'serif'],
+        'playfair': ['Playfair Display', 'serif'],
+      }
+    }
   },
   plugins: [],
 }

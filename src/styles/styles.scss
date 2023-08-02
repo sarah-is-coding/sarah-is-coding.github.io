@@ -1,26 +1,74 @@
-$background-light: #f3f3f3;
-$background-dark: #333;
-$text-light: #333;
-$text-dark: #f3f3f3;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '_fonts.scss';
 
-body {
-  font-family: 'Arial', sans-serif;
-  transition: background 0.3s, color 0.3s;
+// Define color scheme for light theme
+$light-theme: (
+  primary: #ffffff, // white
+  secondary: #000000, // black
+  accent: #007BFF, // blue
+);
+
+// Define color scheme for dark theme
+$dark-theme: (
+  primary: #000000, // black
+  secondary: #ffffff, // white
+  accent: #007BFF, // blue
+);
+
+// Generic Theme
+.theme {
+  color: map-get($light-theme, secondary);
+  background-color: map-get($light-theme, primary);
+  a {
+    color: map-get($light-theme, accent);
+  }
+  // 3D hover effect
+  .hover\:scale-105 {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05) rotateY(20deg);
+    }
+  }
 }
 
-.light-theme {
-  background: $background-light;
-  color: $text-light;
+// Light Theme
+body.light {
+  @extend .theme;
 }
 
-.dark-theme {
-  background: $background-dark;
-  color: $text-dark;
+// Dark Theme
+body.dark {
+  color: map-get($dark-theme, secondary);
+  background-color: map-get($dark-theme, primary);
+  a {
+    color: map-get($dark-theme, accent);
+  }
+  // 3D hover effect
+  .hover\:scale-105 {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05) rotateY(20deg);
+    }
+  }
 }
 
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
+// Define fonts
+.font-josefin {
+  font-family: 'Josefin Slab', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+// Apply base styles
+html, body, #app {
+  @apply w-full h-full;
+}
+
+// Styling for header
+header {
+  @apply flex justify-between p-4;
 }

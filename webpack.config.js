@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development'; // Define mode based on NODE_ENV
 
+
 module.exports = {
   mode: mode,
+  devtool: mode === 'development' ? 'source-map' : false,
   entry: './src/js/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),

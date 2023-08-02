@@ -1,5 +1,6 @@
 npm run start - development mode
 npm run build - production mode
+true npm start - debug mode
 
 If you want to update the gh-pages branch with the latest changes from your main branch, the typical process is to:
 

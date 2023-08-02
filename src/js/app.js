@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
-import './styles.scss';
+import '../styles/styles.scss';
 
 const App = () => {
   // State for Theme Toggle

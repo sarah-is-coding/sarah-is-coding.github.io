@@ -8,6 +8,7 @@ $light-theme: (
   primary: #ffffff, // white
   secondary: #000000, // black
   accent: #007BFF, // blue
+  secondary-accent: #a2d9ff, //light blue
 );
 
 // Define color scheme for dark theme
@@ -15,6 +16,7 @@ $dark-theme: (
   primary: #000000, // black
   secondary: #ffffff, // white
   accent: #007BFF, // blue
+  secondary-accent: #252525, // dark grey
 );
 
 // Generic Theme
@@ -23,6 +25,14 @@ $dark-theme: (
   background-color: map-get($light-theme, primary);
   a {
     color: map-get($light-theme, accent);
+    transition: color 0.3s ease-in-out;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    color: map-get($light-theme, accent);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
   }
   // 3D hover effect
   .hover\:scale-105 {
@@ -36,6 +46,14 @@ $dark-theme: (
 // Light Theme
 body.light {
   @extend .theme;
+
+  nav a:hover {
+    color: map-get($light-theme, secondary-accent);
+  }
+
+  button:hover {
+    color: map-get($light-theme, secondary-accent);
+  }
 }
 
 // Dark Theme
@@ -45,12 +63,25 @@ body.dark {
   a {
     color: map-get($dark-theme, accent);
   }
+
+  button {
+    color: map-get($dark-theme, accent);
+  }
+
   // 3D hover effect
   .hover\:scale-105 {
     transition: transform 0.3s ease-in-out;
     &:hover {
       transform: scale(1.05) rotateY(20deg);
     }
+  }
+
+  nav a:hover {
+    color: map-get($dark-theme, secondary-accent);
+  }
+
+  button:hover {
+    color: map-get($dark-theme, secondary-accent);
   }
 }
 
@@ -71,4 +102,13 @@ html, body, #app {
 // Styling for header
 header {
   @apply flex justify-between p-4;
+}
+
+// Styling for navigation
+nav {
+  ul {
+    a {
+      @apply py-1 px-2 rounded;
+    }
+  }
 }

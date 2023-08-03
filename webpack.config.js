@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const mode = process.env.NODE_ENV || 'development'; // Define mode based on NODE_ENV
-
+const mode = process.env.NODE_ENV || 'development';
+const isDevelopment = mode === 'development';
 
 module.exports = {
   mode: mode,
-  devtool: mode === 'development' ? 'source-map' : false,
+  devtool: isDevelopment ? 'source-map' : false,
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -25,14 +26,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
             },
           },
-          'postcss-loader',  
+          'postcss-loader',
           'sass-loader',
         ],
       },
@@ -49,18 +50,21 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './pages/index/index.html',
-      filename: 'index.html', // Output file name in the 'dist/' directory
+      template: './src/pages/index.html',
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './pages/about/about.html',
-      filename: 'about.html', // Output file name in the 'dist/' directory
+      template: './src/pages/about.html',
+      filename: 'about.html',
     }),
     new HtmlWebpackPlugin({
-      template: './pages/contact/contact.html',
-      filename: 'contact.html', // Output file name in the 'dist/' directory
+      template: './src/pages/contact.html',
+      filename: 'contact.html',
     }),
-    // Other plugins...
+    new MiniCssExtractPlugin({
+      filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
+      chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css',
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],

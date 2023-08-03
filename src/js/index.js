@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';  // Import ReactDOM
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import cherryBlossom from '../../assets/images/cherry_blossom.png';
 import Particles from 'react-tsparticles';
 import About from './about';
@@ -9,14 +9,14 @@ import Contact from './contact';
 import '../styles/styles.scss';
 
 const App = () => {
-  // State for Theme Toggle
   const [theme, setTheme] = useState('light');
 
-  // Toggle the theme between light and dark
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.body.className = newTheme;
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
@@ -45,8 +45,9 @@ const App = () => {
             </ul>
           </nav>
         </header>
-        
+
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
@@ -109,4 +110,4 @@ const App = () => {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));  // Render the app to the DOM
+ReactDOM.render(<App />, document.getElementById('app'));  // Render the app to the DOM

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development'; // Define mode based on NODE_ENV
 
@@ -7,7 +8,7 @@ const mode = process.env.NODE_ENV || 'development'; // Define mode based on NODE
 module.exports = {
   mode: mode,
   devtool: mode === 'development' ? 'source-map' : false,
-  entry: './src/js/app.js',
+  entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -46,6 +47,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './pages/index/index.html',
       filename: 'index.html', // Output file name in the 'dist/' directory

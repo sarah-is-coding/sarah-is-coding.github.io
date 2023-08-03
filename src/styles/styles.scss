@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 @import '_fonts.scss';
 
+
 // Define color scheme for light theme
 $light-theme: (
   primary: #ffffff, // white
@@ -11,6 +12,7 @@ $light-theme: (
   secondary-accent: #a2d9ff, //light blue
 );
 
+
 // Define color scheme for dark theme
 $dark-theme: (
   primary: #000000, // black
@@ -18,6 +20,7 @@ $dark-theme: (
   accent: #007BFF, // blue
   secondary-accent: #252525, // dark grey
 );
+
 
 // Generic Theme
 .theme {
@@ -43,18 +46,22 @@ $dark-theme: (
   }
 }
 
+
 // Light Theme
 body.light {
   @extend .theme;
+
 
   nav a:hover {
     color: map-get($light-theme, secondary-accent);
   }
 
+
   button:hover {
     color: map-get($light-theme, secondary-accent);
   }
 }
+
 
 // Dark Theme
 body.dark {
@@ -64,9 +71,11 @@ body.dark {
     color: map-get($dark-theme, accent);
   }
 
+
   button {
     color: map-get($dark-theme, accent);
   }
+
 
   // 3D hover effect
   .hover\:scale-105 {
@@ -76,33 +85,40 @@ body.dark {
     }
   }
 
+
   nav a:hover {
     color: map-get($dark-theme, secondary-accent);
   }
+
 
   button:hover {
     color: map-get($dark-theme, secondary-accent);
   }
 }
 
+
 // Define fonts
 .font-josefin {
   font-family: 'Josefin Slab', sans-serif;
 }
 
+
 .font-playfair {
   font-family: 'Playfair Display', serif;
 }
+
 
 // Apply base styles
 html, body, #app {
   @apply w-full h-full;
 }
 
+
 // Styling for header
 header {
   @apply flex justify-between p-4;
 }
+
 
 // Styling for navigation
 nav {
@@ -112,6 +128,7 @@ nav {
     }
   }
 }
+
 
 // Particles Container
 .particles-container {

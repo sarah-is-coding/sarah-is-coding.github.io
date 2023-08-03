@@ -29,29 +29,23 @@ Directory structure:
     │
     ├── src/
     │   └── js/
-    │   │   └── app.js
+    │   │   └── index.js
+    │   │   └── projects.js
+    │   │   └── about.js
+    │   │   └── contact.js
     │   │
     │   └── styles/
     │   │   └── styles.scss
-    │   │   └── (other SCSS files)
+    │   │   └── (other SCSS files including _fonts.scss)
+    │   │
+    │   └── pages/
+    │   │   └── index.html
+    │   │   └── projects.html
+    │   │   └── about.html
+    │   │   └── contact.html
+    │   │   └── 404.html
     │   │
     │   └── (other source files and directories)
-    │
-    ├── pages/
-    │   └── home/
-    │   │   └── index.html
-    │   │   └── (associated assets for index page)
-    │   │
-    │   └── about/
-    │   │   └── about.html
-    │   │   └── (associated assets for about page)
-    │   │
-    │   └── contact/
-    │   │   └── contact.html
-    │   │   └── (associated assets for contact page)
-    │   │
-    │   └── 404.html
-    │   │   └── (associated assets for 404 page)
     │
     ├── assets/
     │   └── images/

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import cherryBlossom from '../../assets/images/cherry_blossom.png';
 import Particles from 'react-tsparticles';
 import About from './about';
-import Portfolio from './portfolio';
+import Projects from './projects';
 import Contact from './contact';
 import '../styles/styles.scss';
 
@@ -32,7 +32,7 @@ const App = () => {
                 <Link to="/about">About</Link>
               </li>
               <li className="hover:scale-105 transition-transform duration-300">
-                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/projects">Projects</Link>
               </li>
               <li className="hover:scale-105 transition-transform duration-300">
                 <Link to="/contact">Contact</Link>
@@ -49,7 +49,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

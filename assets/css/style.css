@@ -279,7 +279,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(169, 222, 210, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -303,7 +303,7 @@ h6 {
 }
 
 #hero p span {
-  color: #CCF2E9;
+  color: #A9DED2;
   letter-spacing: 1px;
 }
 

@@ -25,6 +25,19 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+:root {
+  --primary-color: #B2E4D5;  /* Light Seafoam Green */
+  --secondary-color: #C9A1D1;  /* Light Purple */
+  --background-color: #FFFFFF;  /* White */
+}
+
+/* Universal styles for a consistent look */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -393,36 +406,64 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  padding: 60px 0; /* Adding padding to the section for breathing space */
+  background-color: var(--background-color); /* setting the background color to white */
+}
+
+.section-title h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.section-title p {
+  color: var(--secondary-color);
+  margin-bottom: 40px; /* Adding space between title and content */
+}
+
+.about img {
+  border-radius: 8px; /* Soft edge for images */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+}
+
 .about .content h3 {
   font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 20px; /* Space between the title and content */
+}
+
+.about .content p.fst-italic {
+  color: var(--secondary-color);
+  margin-bottom: 30px; /* Space between the italic text and the list */
 }
 
 .about .content ul {
   list-style: none;
-  padding: 0;
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
 }
 
 .about .content ul strong {
+  color: var(--primary-color);
   margin-right: 10px;
+  font-weight: 600; /* Not as bold as before but still prominent */
 }
 
 .about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #CCF2E9;
-  line-height: 0;
+  font-size: 18px;
+  margin-right: 8px;
+  color: var(--secondary-color);
+  line-height: 1; /* Making the icon align properly with text */
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+  color: var(--secondary-color);
 }
 
 /*--------------------------------------------------------------

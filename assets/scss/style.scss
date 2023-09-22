@@ -20,16 +20,7 @@ $border-top-color_1: #fff;
 $border-top-color_2: #eee;
 $border-bottom-color_1: #fff;
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-/* Universal styles for a consistent look */
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+
 @keyframes animate-preloader {
 	0% {
 		transform: rotate(0deg);
@@ -38,48 +29,7 @@ $border-bottom-color_1: #fff;
 		transform: rotate(360deg);
 	}
 }
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
-/**
-* Mobile Navigation 
-*/
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
+
 @keyframes animate-loading {
 	0% {
 		transform: rotate(0deg);
@@ -407,49 +357,77 @@ section {
 		margin-bottom: 40px;
 	}
 }
+// Add a transition effect for smoothness
+* {
+    transition: all 0.3s ease-out;
+}
+
 .about {
-	padding: 60px 0;
-	background-color: $background-color_2;
-	img {
-		border-radius: 8px;
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-	}
-	.content {
-		h3 {
-			font-weight: 700;
-			font-size: 30px;
-			color: $color_7;
-			margin-bottom: 20px;
-		}
-		p.fst-italic {
-			color: $color_8;
-			margin-bottom: 30px;
-		}
-		ul {
-			list-style: none;
-			li {
-				margin-bottom: 15px;
-				display: flex;
-				align-items: center;
-			}
-			strong {
-				color: $color_7;
-				margin-right: 10px;
-				font-weight: 600;
-			}
-			i {
-				font-size: 18px;
-				margin-right: 8px;
-				color: $color_8;
-				line-height: 1;
-			}
-		}
-		p {
-			&:last-child {
-				color: $color_8;
-			}
-		}
-	}
+    padding: 80px 0;  // Increased padding for more spacing
+    background-color: $background-color_2;
+
+    img {
+        border-radius: 50%;  // Circular images often look more elegant
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        transform: scale(1); // Starting scale
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05); // Slight zoom on hover
+        }
+    }
+
+    .content {
+        opacity: 0; // Initially hidden
+        transform: translateY(30px); // Initial position
+
+        // Animation on viewing the content
+        &[data-aos="fade-up"] {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            color: $color_7;
+            margin-bottom: 25px;  // Increased for better spacing
+        }
+
+        p.fst-italic {
+            color: $color_8;
+            margin-bottom: 35px; // Increased for better spacing
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-bottom: 20px;  // Increased for better spacing
+                display: flex;
+                align-items: center;
+            }
+
+            strong {
+                color: $color_7;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+
+            i {
+                font-size: 18px;
+                margin-right: 8px;
+                color: $color_8;
+                line-height: 1;
+            }
+        }
+
+        p {
+            &:last-child {
+                color: $color_8;
+            }
+        }
+    }
 }
 .skills {
 	.progress {

@@ -20,123 +20,123 @@ $border-top-color_1: #fff;
 $border-top-color_2: #eee;
 $border-bottom-color_1: #fff;
 
-@keyframes animate-preloader {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-@keyframes animate-loading {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
 /*--------------------------------------------------------------
-# Footer
+# General
 --------------------------------------------------------------*/
 body {
-	font-family: $font-family_1;
-	color: $color_1;
+  font-family: $font-family_1;
+  color: $color_1;
 }
+
 a {
-	color: $color_2;
-	text-decoration: none;
-	&:hover {
-		color: $color_3;
-		text-decoration: none;
-	}
+  color: $color_2;
+  text-decoration: none;
+
+  &:hover {
+    color: $color_3;
+    text-decoration: none;
+  }
 }
-h1 {
-	font-family: $font-family_2;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family_2;
 }
-h2 {
-	font-family: $font-family_2;
-}
-h3 {
-	font-family: $font-family_2;
-}
-h4 {
-	font-family: $font-family_2;
-}
-h5 {
-	font-family: $font-family_2;
-}
-h6 {
-	font-family: $font-family_2;
-}
+
 :root {
-	--primary-color: #B2E4D5;
-	--secondary-color: #C9A1D1;
-	--background-color: #FFFFFF;
+  --primary-color: #B2E4D5;  /* Light Seafoam Green */
+  --secondary-color: #C9A1D1;  /* Light Purple */
+  --background-color: #FFFFFF;  /* White */
 }
+
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
 .back-to-top {
-	position: fixed;
-	visibility: hidden;
-	opacity: 0;
-	right: 15px;
-	bottom: 15px;
-	z-index: 996;
-	background: #CCF2E9;
-	width: 40px;
-	height: 40px;
-	border-radius: 50px;
-	transition: all 0.4s;
-	i {
-		font-size: 28px;
-		color: $color_4;
-		line-height: 0;
-	}
-	&:hover {
-		background: #CCF2E9;
-		color: $color_4;
-	}
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: $color_2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+
+  i {
+    font-size: 28px;
+    color: $color_4;
+    line-height: 0;
+  }
+
+  &:hover {
+    background: $color_2;
+    color: $color_4;
+  }
 }
+
 .back-to-top.active {
-	visibility: visible;
-	opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9999;
-	overflow: hidden;
-	background: #fff;
-	&:before {
-		content: "";
-		position: fixed;
-		top: calc(50% - 30px);
-		left: calc(50% - 30px);
-		border: 6px solid #CCF2E9;
-		border-top-color: $border-top-color_1;
-		border-bottom-color: $border-bottom-color_1;
-		border-radius: 50%;
-		width: 60px;
-		height: 60px;
-		animation: animate-preloader 1s linear infinite;
-	}
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: $color_4;
+
+  &:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid $color_2;
+    border-top-color: $border-top-color_1;
+    border-bottom-color: $border-bottom-color_1;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
 }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 #header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 9997;
-	transition: all 0.5s;
-	padding: 15px;
-	overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
 }
 .nav-menu {
 	padding: 0;

@@ -169,8 +169,8 @@ h6 {
 	&:before {
 		content: "";
 		position: fixed;
-		top: calc(80% - 30px);
-		left: calc(80% - 30px);
+		top: calc(50% - 30px);
+		left: calc(50% - 30px);
 		border: 6px solid #CCF2E9;
 		border-top-color: $border-top-color_1;
 		border-bottom-color: $border-bottom-color_1;

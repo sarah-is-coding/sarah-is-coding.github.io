@@ -88,8 +88,8 @@ h6 {
 #preloader:before {
   content: "";
   position: fixed;
-  top: calc(80% - 30px);
-  left: calc(80% - 30px);
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
   border: 6px solid #CCF2E9;
   border-top-color: #fff;
   border-bottom-color: #fff;

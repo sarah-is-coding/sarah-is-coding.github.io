@@ -26,10 +26,11 @@ h6 {
 }
 
 :root {
-  --primary-color: #DAA5B3; /* Dusty Pink */
-  --secondary-color: #C5B8D0; /* Soft Lavender */
-  --background-color: #F8F8F8; /* Off-White */
-  --title-text-color: #3A3A3C; /* Charcoal Grey */
+  --primary-color: #DAA7DF;  /* Soft Lilac */
+  --secondary-color: #976DD0;  /* Medium Purple */
+  --background-color: #F4F0FA;  /* Light Lavender */
+  --title-text-color: #533A71;  /* Deep Purple */
+  --accent-color: #FFC2E2;  /* Soft Pink */
 
 }
 

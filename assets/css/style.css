@@ -26,10 +26,11 @@ h6 {
 }
 
 :root {
-  --primary-color: #B2E4D5;  /* Light Seafoam Green */
-  --secondary-color: #C9A1D1;  /* Light Purple */
-  --background-color: #FFFFFF;  /* White */
-  --title-text-color: #45505b;
+  --primary-color: #DAA5B3; /* Dusty Pink */
+  --secondary-color: #C5B8D0; /* Soft Lavender */
+  --background-color: #F8F8F8; /* Off-White */
+  --title-text-color: #3A3A3C; /* Charcoal Grey */
+
 }
 
 /* Universal styles for a consistent look

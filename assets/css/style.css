@@ -31,12 +31,12 @@ h6 {
   --background-color: #FFFFFF;  /* White */
 }
 
-/* Universal styles for a consistent look */
+/* Universal styles for a consistent look
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Back to top button

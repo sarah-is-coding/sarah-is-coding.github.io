@@ -27,18 +27,12 @@ h6 {
 
 :root {
     --primary-color: #7C2A82;  /* Elegant Dark Purple */
-    --background-color: #FFFFFF;  /* Soft Cream */
-    --title-text-color: #57454B;  /* Deep Plum */
+    --background-color: #FFFFFF;  /* White */
+    --title-text-color: #57454B;  /* Greyed Plum */
     --body-text-color: #2C2C2C;  /* Dark Grey */
     --accent-color: #468189;  /* Muted Teal */
+    --accent-color-2: #FAF3E6; /* Soft Cream */
 }
-
-/* Universal styles for a consistent look
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
 
 /*--------------------------------------------------------------
 # Back to top button

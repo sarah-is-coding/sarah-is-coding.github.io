@@ -1,5 +1,8 @@
 # Project Overview
 
+Visit the site!
+https://sarah-is-coding.github.io/
+
 ## Functionalities
 
 Utilizing Vite for efficient project setup and development.

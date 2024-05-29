@@ -25,6 +25,7 @@ import menu from './menu.svg';
 
 // Projects
 import HomeCookHub from './projects/homecookhub.jpg';
+import BloomHaven from './projects/bloomhaven.jpg';
 
 // Avatar
 import avatar from './avatar/avatar.png';
@@ -49,6 +50,7 @@ export {
   neoIcon,
   raspIcon,
   HomeCookHub,
+  BloomHaven,
   avatar,
   bl33hIcon,
 };

@@ -27,6 +27,7 @@ import {
 	javaIcon,
 	jsIcon,
 	HomeCookHub,
+	BloomHaven,
 	neoIcon,
 	nodeIcon,
 	psqlIcon,
@@ -74,7 +75,7 @@ const introduction = {
 	text: [
 		"Greetings! I'm thrilled you've stopped by! :)",
 
-		"I'm Sarah, a 22-year-old about to receive my Bachelor's degree in Computer Science from the University of Cincinnati. My enthusiasm lies in the realm of database technologies and user experience (UX).",
+		"I'm Sarah, I was born on June, 7 2001 and received my Bachelor's degree in Computer Science from the University of Cincinnati in April of 2024. My enthusiasm lies in the realm of database technologies and user experience (UX).",
 
 		"Beyond my academic pursuits, I find joy in playing in board games with my friends whenever possible. Additionally, I'm a big cat lover and take pleasure in reading as a leisure activity.",
 
@@ -110,6 +111,13 @@ const projects = [
 		source_code_link: "https://github.com/sarah-is-coding/HomeCookHub",
 		demo_link: "https://sarah-is-coding.github.io/HomeCookHub/",
 	},
+	{
+		name: "BloomHaven",
+		description: "E-commerce website for bouquets using HTML, CSS, and JavaScript",
+		image: BloomHaven,
+		source_code_link: "https://github.com/sarah-is-coding/BloomHaven",
+		demo_link: "https://sarah-is-coding.github.io/BloomHaven/",
+	}
 ];
 
 const memoji = {

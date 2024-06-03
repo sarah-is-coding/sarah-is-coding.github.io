@@ -1,1 +1,0 @@
-import{_ as r}from"./index-9b59b0f2.js";async function n(t,a=!0){await t.addParticleUpdater("twinkle",async()=>{const{TwinkleUpdater:e}=await r(()=>import("./TwinkleUpdater-314985e1.js"),["assets/TwinkleUpdater-314985e1.js","assets/OptionsColor-6893f21d.js","assets/Utils-eafc054a.js","assets/ColorUtils-22ba7e62.js"]);return new e},a)}export{n as loadTwinkleUpdater};

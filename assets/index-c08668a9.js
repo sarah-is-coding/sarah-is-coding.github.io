@@ -1,1 +1,0 @@
-import{_ as o}from"./index-1486a9a7.js";async function l(t,a=!0){await t.addParticleUpdater("roll",async()=>{const{RollUpdater:r}=await o(()=>import("./RollUpdater-293d7fbd.js"),["assets/RollUpdater-293d7fbd.js","assets/index-1486a9a7.js","assets/index-d9442383.css","assets/Utils-eafc054a.js","assets/OptionsColor-6893f21d.js"]);return new r},a)}export{l as loadRollUpdater};

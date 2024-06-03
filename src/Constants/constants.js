@@ -233,13 +233,11 @@ const experience = [
       company: "Booz Allen Hamilton, Beavercreek, OH",
       duration: "January 2021 - January 2023",
       responsibilities: [
-        "Developed and optimized emitter identification and verification algorithms using Python.",
-        "Enhanced the performance of pulse train deinterleaving algorithms with Jupyter Notebook.",
-        "Implemented comprehensive testing coverage with pytests.",
+        "Developed and improved algorithms to identify and verify signal sources, using Python and data analysis techniques.",
+        "Enhanced the performance of algorithms that process and analyze signal patterns, using tools like Jupyter Notebook, Pandas, and Matplotlib.",
+        "Ensured reliability by writing extensive tests for all modules and functions, and created methods to validate different algorithms.",
         "Participated actively in an Agile team, employing Scrum and Kanban methodologies.",
-        "Conducted detailed briefings to government clients regarding progress and findings.",
-        "Crafted and executed test plans in C for UART design verification.",
-        "Explored and evaluated open-source tools such as Verilator and Yosys."
+        "Worked closely with a team using Agile practices like Scrum and Kanban to deliver high-quality software projects on time."
       ],
     },
   ];

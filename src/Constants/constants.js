@@ -28,6 +28,7 @@ import {
 	jsIcon,
 	HomeCookHub,
 	BloomHaven,
+	HDR,
 	neoIcon,
 	nodeIcon,
 	psqlIcon,
@@ -109,7 +110,7 @@ const projects = [
 		description: "A home cook meal planner implemented with React and Node.js. Here you can plan varied and nutritious meals, maintain and automatically generate organized grocery lists, customize recipes to align with specific dietary restrictions and share your own recipes.",
 		image: HomeCookHub,
 		source_code_link: "https://github.com/sarah-is-coding/HomeCookHub",
-		demo_link: "https://sarah-is-coding.github.io/HomeCookHub/",
+		demo_link: "https://www.youtube.com/watch?v=yvtZyR45woM",
 	},
 	{
 		name: "BloomHaven",
@@ -117,6 +118,13 @@ const projects = [
 		image: BloomHaven,
 		source_code_link: "https://github.com/sarah-is-coding/BloomHaven",
 		demo_link: "https://sarah-is-coding.github.io/BloomHaven/",
+	},
+	{
+		name: "Handwritten Digit Recognizer",
+		description: "Handwritten Digit Recognition using Convolutional Neural Network and Kivy GUI",
+		image: HDR,
+		source_code_link: "https://github.com/sarah-is-coding/Handwritten-Digit-Recognizer",
+		demo_link: "https://youtu.be/1o999abiXUw?si=A5xtbF6QhSW6VYUH",
 	}
 ];
 

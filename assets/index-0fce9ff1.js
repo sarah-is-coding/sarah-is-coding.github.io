@@ -1,1 +1,0 @@
-import{_ as i}from"./index-1c0bb60d.js";async function d(t,a=!0){await t.addParticleUpdater("tilt",async r=>{const{TiltUpdater:e}=await i(()=>import("./TiltUpdater-b2dafeae.js"),["assets/TiltUpdater-b2dafeae.js","assets/Utils-eafc054a.js","assets/ValueWithRandom-341d57b0.js","assets/AnimationOptions-c2d1747c.js"]);return new e(r)},a)}export{d as loadTiltUpdater};

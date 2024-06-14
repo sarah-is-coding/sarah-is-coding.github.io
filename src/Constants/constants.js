@@ -107,10 +107,10 @@ export const navLinks = [
 const projects = [
 	{
 		name: "HomeCookHub",
-		description: "A home cook meal planner implemented with React and Node.js. Here you can plan varied and nutritious meals, maintain and automatically generate organized grocery lists, customize recipes to align with specific dietary restrictions and share your own recipes.",
+		description: "A home cook meal planner implemented with React and Node.js. Here you can search for recipes, meal plan and automatically generate grocery lists.",
 		image: HomeCookHub,
 		source_code_link: "https://github.com/sarah-is-coding/HomeCookHub",
-		demo_link: "https://www.youtube.com/watch?v=yvtZyR45woM",
+		demo_link: "https://youtu.be/FjYzqXnyklE",
 	},
 	{
 		name: "BloomHaven",
